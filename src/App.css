@@ -1,0 +1,8 @@
+body {
+  margin-bottom: 100px;
+}
+
+li {
+  padding: 70px;
+  display: inline-block;
+}
