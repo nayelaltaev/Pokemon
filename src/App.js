@@ -39,16 +39,21 @@ export default class component extends Component {
     } else {
       return (
         <div id="mainContainer">
+          <h1>POKEMON</h1>
           <ol>
             {items.map((item) => (
               <li key={item.name}>
-                {item.name}
-                {/* <img src={item.url} /> */}
-                <img
-                  width={"150px"}
-                  height={"150px"}
-                  src={`https://img.pokemondb.net/artwork/${item.name}.jpg`}
-                />
+                <div className="cards">
+                  <div className="names">{item.name.toUpperCase()}</div>
+                  <div className="images">
+                    <img
+                      alt="loading"
+                      width={"150px"}
+                      height={"150px"}
+                      src={`https://img.pokemondb.net/artwork/${item.name}.jpg`}
+                    />
+                  </div>
+                </div>
               </li>
             ))}
           </ol>
